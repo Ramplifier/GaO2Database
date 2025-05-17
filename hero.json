@@ -524,7 +524,7 @@
       ]
     }
   },
-          {
+  {
     "name": "Bain",
     "title": "Bain the Bounty Hunter",
     "difficulty": 2,
@@ -2602,7 +2602,7 @@
       ]
     }
   },
-          {
+  {
     "name": "Dodger",
     "title": "Dodger the Warlock",
     "difficulty": 1,
@@ -3651,7 +3651,7 @@
       ]
     }
   },
-          {
+  {
     "name": "Garrus",
     "title": "Garrus the Gladiator",
     "difficulty": 2,
@@ -4688,7 +4688,7 @@
       ]
     }
   },
-          {
+  {
     "name": "Hanu",
     "title": "Hanu the Trickster",
     "difficulty": 3,
@@ -7835,7 +7835,7 @@
       ]
     }
   },
-          {
+  {
     "name": "Nebkher",
     "title": "Nebkher the Harbinger",
     "difficulty": 4,
@@ -10457,7 +10457,7 @@
       ]
     }
   },
-          {
+  {
     "name": "Silverarrow",
     "title": "Silverarrow the Patfinder",
     "difficulty": 2,
@@ -12016,7 +12016,7 @@
       ]
     }
   },
-          {
+  {
     "name": "Tali",
     "title": "Tali the Spirit Caller",
     "difficulty": 3,
@@ -13066,7 +13066,7 @@
       ]
     }
   },
-          {
+  {
     "name": "Trinkets",
     "title": "Trinkets the Scavenger",
     "difficulty": 3,
@@ -13596,7 +13596,7 @@
       ]
     }
   },
-          {
+  {
     "name": "Ursafar",
     "title": "Ursafar the Savage",
     "difficulty": 2,
