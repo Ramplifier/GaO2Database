@@ -12077,7 +12077,7 @@
 </div>
 </body>
 <script>
-    console.log('Hello World!')
+
     let heroData = [
         {
             "name": "Arien",
@@ -14197,38 +14197,22 @@
             "cards":{
                 "ultimate": [
                     {
-                        "name": "Reign of Winter",
-                        "effect": "Each time after you defeat a minion with your basic attack, an enemy hero in radius discards a card of the color of your choice, if able.",
-                        "parameter":[
-                            {
-                                "type": "Area",
-                                "value": 4
-                            }
-                        ]
+                        "name": "Legend of the Skies",
+                        "effect": "The first time each turn after you perform a primary action, you may perform the primary action of a card in the previous turn slot."
                     }
                 ],
                 "gold": [
                     {
-                        "name": "Ice Blast",
-                        "initiative": 11,
+                        "name": "Walk the Plank",
+                        "initiative": 12,
                         "actions": {
                             "primary": {
-                                "parameter":[
-                                    {
-                                        "type": "Attack",
-                                        "value": 3
-                                    },
-                                    {
-                                        "type": "Area",
-                                        "value": 4
-                                    }
-                                ],
-                                "effect": "Target a unit adjacent to you. If the target discards a card to defend, After the attack: Another enemy hero in radius discards a card of the same color, if able."
+                                "effect": "<b>Choose one:</b><br>- Push an enemy hero adjacent to you up to 4 spaces; if that hero is pushed into another zone, that hero discards a card, or is defeated.<br>- Defeat a minion adjacent to you."
                             },
                             "secondary": [
                                 {
                                     "type": "Defense",
-                                    "value": 1
+                                    "value": 2
                                 },
                                 {
                                     "type": "Movement",
@@ -14241,22 +14225,26 @@
                 ],
                 "silver": [
                     {
-                        "name": "Commune With Spirits",
-                        "initiative": 13,
+                        "name": "Grappling Bolt",
+                        "initiative": 5,
                         "actions": {
                             "primary": {
                                 "parameter":[
                                     {
                                         "type": "Basic skill",
                                         "value": ""
+                                    },
+                                    {
+                                        "type": "Ranged",
+                                        "value": "5"
                                     }
                                 ],
-                                "effect": "A friendly hero in play names a color. You may discard a card of that color. Perform the primary action on a card of that color in your discard."
+                                "effect": "Target an obstacle in range and in range in a straight line, with no obstacles between you; ignore immunity. Move in a straight line towards that obstacle until you are adjacent to it."
                             },
                             "secondary": [
                                 {
                                     "type": "Defense",
-                                    "value": "2"
+                                    "value": 2
                                 }
                             ]
                         }
@@ -14266,94 +14254,8 @@
                 "red": [
                     [
                         {
-                            "name": "Winter Dagger",
+                            "name": "Daring Strike",
                             "initiative": 8,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": "2+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "6"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Winter Spear",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": "3+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "6"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Spirit Wolf",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": 3
-                                        },
-                                        {
-                                            "type": "Range",
-                                            "value": 2
-                                        }
-                                    ],
-                                    "effect": "If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "3"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Winter Scepter",
-                            "initiative": 9,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -14362,33 +14264,63 @@
                                             "value": "4+"
                                         }
                                     ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
+                                    "effect": "<b>Choose one</b><br>- Before the attack: Move 1 space. Target a hero adjacent to you in the direction of the move; +2 attack.<br>- Target a unit adjacent to you."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "7"
+                                        "value": 6
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 3
                                     }
                                 ]
                             }
-
-                        },
+                        }
+                    ],
+                    [
                         {
-                            "name": "Spirit Bear",
+                            "name": "Bold Thrust",
                             "initiative": 9,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
-                                            "type": "Area",
-                                            "value": 4
+                                            "type": "Attack",
+                                            "value": "5+"
                                         }
                                     ],
-                                    "effect": "Choose one, or both, on different targets: If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
+                                    "effect": "<b>Choose one</b><br>- Before the attack: Move 1 or 2 spaces. Target a hero adjacent to you in the direction of the move; +2 attack.<br>- Target a unit adjacent to you."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 6
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Evasive Shot",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 4
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 2
+                                        }
+                                    ],
+                                    "effect": "Target a unit in range and in a straight line. After the attack: Move up to 2 spaces in the opposite direction."
                                 },
                                 "secondary": [
                                     {
@@ -14397,28 +14329,136 @@
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 4
+                                        "value": 3
                                     }
                                 ]
                             }
-
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Fearless Lunge",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": "5+"
+                                        }
+                                    ],
+                                    "effect": "<b>Choose one</b><br>- Before the attack: Move 1, 2 or 3 spaces. Target a hero adjacent to you in the direction of the move; +2 attack.<br>- Target a unit adjacent to you."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 7
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Tumble Shot",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 4
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 2
+                                        }
+                                    ],
+                                    "effect": "Target a unit in range and in a straight line. After the attack: Move up to 3 spaces in the opposite direction."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
                         }
                     ]
                 ],
                 "blue": [
                     [
                         {
-                            "name": "Cold Snap",
-                            "initiative": 9,
+                            "name": "Bombartment",
+                            "initiative": 10,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Area",
-                                            "value": 2
+                                            "value": 3
                                         }
                                     ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
+                                    "effect": "An enemy hero in radius, adjacent to another unit and not adjacent to you, discards a card, if able."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Barrage",
+                            "initiative": 10,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "An enemy hero in radius, adjacent to another unit and not adjacent to you, discards a card, if able."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "X Marks the Spot",
+                            "initiative": 10,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 3
+                                        }
+                                    ],
+                                    "effect": "An enemy in radius <b>chooses one</b><br>- You place that hero in a space in radius.<br>- You gain 2 coins."
                                 },
                                 "secondary": [
                                     {
@@ -14436,34 +14476,8 @@
                     ],
                     [
                         {
-                            "name": "Snowstorm",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "5"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "3"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Guardian Spirit",
-                            "initiative": 10,
+                            "name": "Broadside",
+                            "initiative": 11,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -14472,61 +14486,7 @@
                                             "value": 4
                                         }
                                     ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Guardian Spirit \" is in the discard retrieve it."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 5
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 3
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Blizzard",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able. If this card is in your discard, End of turn: May repeat once."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "5"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "3"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Warrior Spirit",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 4
-                                        }
-                                    ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Warrior Spirit \" is in the discard retrieve it."
+                                    "effect": "An enemy hero in radius, adjacent to another unit and not adjacent to you, discards a card, if able. May repeat on a different target."
                                 },
                                 "secondary": [
                                     {
@@ -14540,14 +14500,10 @@
                                 ]
                             }
 
-                        }
-                    ]
-                ],
-                "green": [
-                    [
+                        },
                         {
-                            "name": "Glacial Barrier",
-                            "initiative": 4,
+                            "name": "A Fistful of Coins",
+                            "initiative": 11,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -14556,7 +14512,30 @@
                                             "value": 3
                                         }
                                     ],
-                                    "effect": "Place an Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "An enemy in radius <b>chooses one</b><br>- You place that hero in a space in radius.<br>- You gain 3 coins. If you have 13 coins or more coins, you alone win the game."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 6
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ],
+                "green": [
+                    [
+                        {
+                            "name": "Brace for Impact",
+                            "initiative": 3,
+                            "actions": {
+                                "primary": {
+                                    "effect": "Move 3 spaces in a straight line, ignoring obstacles, to a space adjacent to an enemy hero; that hero discards a card, if able."
                                 },
                                 "secondary": [
                                     {
@@ -14569,22 +14548,15 @@
                                     }
                                 ]
                             }
-
                         }
                     ],
                     [
                         {
-                            "name": "Wall of Frost",
+                            "name": "Ramming Speed",
                             "initiative": 3,
                             "actions": {
                                 "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place up to 2 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "Move 3 or 4 spaces in a straight line, ignoring obstacles, to a space adjacent to an enemy hero; that hero discards a card, if able."
                                 },
                                 "secondary": [
                                     {
@@ -14600,17 +14572,17 @@
 
                         },
                         {
-                            "name": "Ancestral Totem",
+                            "name": "Outmaneuver",
                             "initiative": 3,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
-                                            "type": "Range",
-                                            "value": 2
+                                            "type": "Area",
+                                            "value": 3
                                         }
                                     ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead."
+                                    "effect": "Swap with an enemy minion in radius; you may swap that minion up to 2 spaces."
                                 },
                                 "secondary": [
                                     {
@@ -14623,22 +14595,15 @@
                                     }
                                 ]
                             }
-
                         }
                     ],
                     [
                         {
-                            "name": "Pack Ice",
-                            "initiative": 3,
+                            "name": "Crashland",
+                            "initiative": 2,
                             "actions": {
                                 "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place up to 3 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "Move 3, 4 or 5 spaces in a straight line, ignoring obstacles, to a space adjacent to an enemy hero; that hero discards a card, if able."
                                 },
                                 "secondary": [
                                     {
@@ -14654,17 +14619,17 @@
 
                         },
                         {
-                            "name": "Venerated Totem",
-                            "initiative": 3,
+                            "name": "Outsmart",
+                            "initiative": 2,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Range",
-                                            "value": 2
+                                            "value": 3
                                         }
                                     ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead. Totem tokens are immune to enemy actions."
+                                    "effect": "Swap with an enemy minion in radius; you may swap that minion up to 3 spaces."
                                 },
                                 "secondary": [
                                     {
@@ -17333,38 +17298,32 @@
             "cards":{
                 "ultimate": [
                     {
-                        "name": "Reign of Winter",
-                        "effect": "Each time after you defeat a minion with your basic attack, an enemy hero in radius discards a card of the color of your choice, if able.",
-                        "parameter":[
-                            {
-                                "type": "Area",
-                                "value": 4
-                            }
-                        ]
+                        "name": "Chaos Incarnate",
+                        "effect": "The first time each turn after you perform a primary action, you may flip the Tie Breaker coin; if you do, you may perform that action again choosing different targets."
                     }
                 ],
                 "gold": [
                     {
-                        "name": "Ice Blast",
+                        "name": "Chaos bold",
                         "initiative": 11,
                         "actions": {
                             "primary": {
                                 "parameter":[
                                     {
                                         "type": "Attack",
-                                        "value": 3
+                                        "value": 2
                                     },
                                     {
                                         "type": "Area",
-                                        "value": 4
+                                        "value": 3
                                     }
                                 ],
-                                "effect": "Target a unit adjacent to you. If the target discards a card to defend, After the attack: Another enemy hero in radius discards a card of the same color, if able."
+                                "effect": "☆ Target a minion adajcent to you. <br>○ Target a unit in range <br><i>(Apply the text matching the symbol on the Tie Breaker coin.)</i>"
                             },
                             "secondary": [
                                 {
                                     "type": "Defense",
-                                    "value": 1
+                                    "value": 2
                                 },
                                 {
                                     "type": "Movement",
@@ -17377,7 +17336,7 @@
                 ],
                 "silver": [
                     {
-                        "name": "Commune With Spirits",
+                        "name": "Equilibrium",
                         "initiative": 13,
                         "actions": {
                             "primary": {
@@ -17387,7 +17346,7 @@
                                         "value": ""
                                     }
                                 ],
-                                "effect": "A friendly hero in play names a color. You may discard a card of that color. Perform the primary action on a card of that color in your discard."
+                                "effect": "<b>This round: </b> Each time you perform or repeat a primary action, you may apply either ☆ or ○ card text, regardless of the Tie Breaker Coin."
                             },
                             "secondary": [
                                 {
@@ -17402,62 +17361,8 @@
                 "red": [
                     [
                         {
-                            "name": "Winter Dagger",
-                            "initiative": 8,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": "2+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "6"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Winter Spear",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": "3+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "6"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Spirit Wolf",
-                            "initiative": 9,
+                            "name": "Playing with Fire",
+                            "initiative": 7,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -17470,16 +17375,16 @@
                                             "value": 2
                                         }
                                     ],
-                                    "effect": "If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
+                                    "effect": "☆ Target a unit in range not in a straight line. <br>○ Target a unit in a straight line."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "3"
+                                        "value": 4
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 3
                                     }
                                 ]
                             }
@@ -17488,78 +17393,145 @@
                     ],
                     [
                         {
-                            "name": "Winter Scepter",
-                            "initiative": 9,
+                            "name": "Erratic Fireblast",
+                            "initiative": 7,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Attack",
-                                            "value": "4+"
+                                            "value": 3
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 3
                                         }
                                     ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
+                                    "effect": "☆ Target a unit in range not in a straight line. <br>○ Target a unit in a straight line."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "7"
+                                        "value": 5
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Crack of Doom",
+                            "initiative": 7,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 5
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 5
+                                        }
+                                    ],
+                                    "effect": "☆ Target a unit adjacent to you.<br>○ Target a unit at maximum range."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 6
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Loosely-Aimed Firebolts",
+                            "initiative": 8,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 4
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 3
+                                        }
+                                    ],
+                                    "effect": "☆ Target a unit in range not in a straight line. <br>○ Target a unit in a straight line. May repeat once on a different hero."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
                                     }
                                 ]
                             }
 
                         },
                         {
-                            "name": "Spirit Bear",
-                            "initiative": 9,
+                            "name": "Imminent Eruption",
+                            "initiative": 8,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
-                                            "type": "Area",
-                                            "value": 4
+                                            "type": "Attack",
+                                            "value": 6
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 5
                                         }
                                     ],
-                                    "effect": "Choose one, or both, on different targets: If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
+                                    "effect": "☆ Target a unit adjacent to you. May repeat once on a minion.<br>○ Target a unit at maximum range."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 4
+                                        "value": 6
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 4
+                                        "value": 3
                                     }
                                 ]
                             }
-
                         }
                     ]
                 ],
                 "blue": [
                     [
                         {
-                            "name": "Cold Snap",
+                            "name": "Abrupt Combustion",
                             "initiative": 9,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Area",
-                                            "value": 2
+                                            "value": 3
                                         }
                                     ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
+                                    "effect": "☆ An enemy hero in radius adjacent to a token or to a minion discards a card if able.<br>○ Remove an enemy minion in radius adjacent to an enemy hero."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 5
+                                        "value": 3
                                     },
                                     {
                                         "type": "Movement",
@@ -17567,13 +17539,37 @@
                                     }
                                 ]
                             }
-
                         }
                     ],
                     [
                         {
-                            "name": "Snowstorm",
-                            "initiative": 10,
+                            "name": "Spontaneous Immolation",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "☆ An enemy hero in radius adjacent to a token or to a minion discards a card, if able.<br>○ Remove an enemy minion in radius adjacent to an enemy hero."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 4
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Searing Heat",
+                            "initiative": 9,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -17582,23 +17578,24 @@
                                             "value": 3
                                         }
                                     ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
+                                    "effect": "☆ Move a friendly hero in radius 2 spaces in a straight line.<br>○ Move an enemy hero in radius 2 spaces in a straight line."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "5"
+                                        "value": 4
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "3"
+                                        "value": 3
                                     }
                                 ]
                             }
-
-                        },
+                        }
+                    ],
+                    [
                         {
-                            "name": "Guardian Spirit",
+                            "name": "Violent Conflagration",
                             "initiative": 10,
                             "actions": {
                                 "primary": {
@@ -17608,12 +17605,12 @@
                                             "value": 4
                                         }
                                     ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Guardian Spirit \" is in the discard retrieve it."
+                                    "effect": "☆ An enemy hero in radius adjacent to a token or to a minion discards a card, or is defeated.<br>○ Defeat an enemy minion in radius adjacent to an enemy hero."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 5
+                                        "value": 4
                                     },
                                     {
                                         "type": "Movement",
@@ -17621,12 +17618,9 @@
                                     }
                                 ]
                             }
-
-                        }
-                    ],
-                    [
+                        },
                         {
-                            "name": "Blizzard",
+                            "name": "Scorching Blaze",
                             "initiative": 10,
                             "actions": {
                                 "primary": {
@@ -17636,38 +17630,12 @@
                                             "value": 3
                                         }
                                     ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able. If this card is in your discard, End of turn: May repeat once."
+                                    "effect": "☆ Move a friendly hero in radius 2 or 3 spaces in a straight line.<br>○ Move an enemy hero in radius 2 or 3 spaces in a straight line."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "5"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "3"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Warrior Spirit",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 4
-                                        }
-                                    ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Warrior Spirit \" is in the discard retrieve it."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 6
+                                        "value": 4
                                     },
                                     {
                                         "type": "Movement",
@@ -17682,7 +17650,89 @@
                 "green": [
                     [
                         {
-                            "name": "Glacial Barrier",
+                            "name": "Path of Ashes",
+                            "initiative": 5,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 3
+                                        }
+                                    ],
+                                    "effect": "☆ Move up to 2 spaces in a straight line. Place a Magma token in each empty space you moved trough, or out of.<br>○ Place 2 Magma tokens in radius."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Path of Cinders",
+                            "initiative": 5,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "☆ Move up to 3 spaces in a straight line. Place a Magma token in each empty space you moved trough, or out of.<br>○ Place 3 Magma tokens in radius."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "Unstable Portal",
+                            "initiative": 5,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 3
+                                        }
+                                    ],
+                                    "effect": "☆ Swap with a friendly unit in radius.<br>○ Swap with a enemy unit in radius."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Path of Flames",
                             "initiative": 4,
                             "actions": {
                                 "primary": {
@@ -17692,7 +17742,7 @@
                                             "value": 3
                                         }
                                     ],
-                                    "effect": "Place an Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "☆ Move up to 4 spaces in a straight line. Place a Magma token in each empty space you moved trough, or out of.<br>○ Place 4 Magma tokens in radius."
                                 },
                                 "secondary": [
                                     {
@@ -17705,107 +17755,24 @@
                                     }
                                 ]
                             }
-
-                        }
-                    ],
-                    [
+                        },
                         {
-                            "name": "Wall of Frost",
-                            "initiative": 3,
+                            "name": "Chaos Gate",
+                            "initiative": 4,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Area",
-                                            "value": 3
+                                            "value": 4
                                         }
                                     ],
-                                    "effect": "Place up to 2 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "☆ Swap with a friendly unit in radius. You may move that unit 1 space.<br>○ Swap with a enemy unit in radius. You may move one space."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
                                         "value": 3
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Ancestral Totem",
-                            "initiative": 3,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Range",
-                                            "value": 2
-                                        }
-                                    ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 3
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Pack Ice",
-                            "initiative": 3,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place up to 3 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 4
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Venerated Totem",
-                            "initiative": 3,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Range",
-                                            "value": 2
-                                        }
-                                    ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead. Totem tokens are immune to enemy actions."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 4
                                     },
                                     {
                                         "type": "Movement",
@@ -17857,33 +17824,27 @@
             "cards":{
                 "ultimate": [
                     {
-                        "name": "Reign of Winter",
-                        "effect": "Each time after you defeat a minion with your basic attack, an enemy hero in radius discards a card of the color of your choice, if able.",
-                        "parameter":[
-                            {
-                                "type": "Area",
-                                "value": 4
-                            }
-                        ]
+                        "name": "Flurry of blows",
+                        "effect": "Each time after you perform an attack action, you may repeat it once on a different target."
                     }
                 ],
                 "gold": [
                     {
-                        "name": "Ice Blast",
-                        "initiative": 11,
+                        "name": "Fast as Lightning",
+                        "initiative": 13,
                         "actions": {
                             "primary": {
                                 "parameter":[
                                     {
                                         "type": "Attack",
-                                        "value": 3
+                                        "value": 2
                                     },
                                     {
-                                        "type": "Area",
-                                        "value": 4
+                                        "type": "Range",
+                                        "value": 1
                                     }
                                 ],
-                                "effect": "Target a unit adjacent to you. If the target discards a card to defend, After the attack: Another enemy hero in radius discards a card of the same color, if able."
+                                "effect": "Target a unit in range. After the attack: Apply the \"After the attack\" text of your resolved or discarded red card.<br><i>(If it has radius, use that card's value.)</i>"
                             },
                             "secondary": [
                                 {
@@ -17896,91 +17857,39 @@
                                 }
                             ]
                         }
-
                     }
                 ],
                 "silver": [
                     {
-                        "name": "Commune With Spirits",
-                        "initiative": 13,
+                        "name": "Smoke Bomb",
+                        "initiative": 12,
                         "actions": {
                             "primary": {
                                 "parameter":[
                                     {
                                         "type": "Basic skill",
                                         "value": ""
+                                    },
+                                    {
+                                        "type": "Area",
+                                        "value": "3"
                                     }
                                 ],
-                                "effect": "A friendly hero in play names a color. You may discard a card of that color. Perform the primary action on a card of that color in your discard."
+                                "effect": "Place the Smoke bomb token in radius; enemy heroes cannot target you or another unit if the Smoke bomb token in on a straight line between that enemy and their target."
                             },
                             "secondary": [
                                 {
                                     "type": "Defense",
-                                    "value": "2"
+                                    "value": "1"
                                 }
                             ]
                         }
-
                     }
                 ],
                 "red": [
                     [
                         {
-                            "name": "Winter Dagger",
-                            "initiative": 8,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": "2+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "6"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Winter Spear",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": "3+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "6"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Spirit Wolf",
+                            "name": "Crane Stance",
                             "initiative": 9,
                             "actions": {
                                 "primary": {
@@ -17988,22 +17897,18 @@
                                         {
                                             "type": "Attack",
                                             "value": 3
-                                        },
-                                        {
-                                            "type": "Range",
-                                            "value": 2
                                         }
                                     ],
-                                    "effect": "If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
+                                    "effect": "Target a unit adjacent to you. After the attack: Push an enemy unit adjacent to you up to 3 spaces."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "3"
+                                        "value": 5
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 5
                                     }
                                 ]
                             }
@@ -18012,52 +17917,112 @@
                     ],
                     [
                         {
-                            "name": "Winter Scepter",
+                            "name": "Tiger Stance",
                             "initiative": 9,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Attack",
-                                            "value": "4+"
+                                            "value": 4
                                         }
                                     ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
+                                    "effect": "Target a unit adjacent to you. After the attack: You may move 1 space to a space adjacent to the target. Push an enemy unit adjacent to you up to 3 spaces."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "7"
+                                        "value": 5
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 5
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Viper Stance",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 5
+                                        },
+                                        {
+                                            "type": "Area",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "Target a unit adjacent to you. After the attack: You may swap with a Smoke bomb in radius."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 5
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Dragon Stance",
+                            "initiative": 10,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "Target a unit adjacent to you. After the attack: You may move 1 or 2 spaces to a space adjacent to the target. Push an enemy unit adjacent to you up to 3 spaces."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 5
                                     }
                                 ]
                             }
 
                         },
                         {
-                            "name": "Spirit Bear",
-                            "initiative": 9,
+                            "name": "Cobra Stance",
+                            "initiative": 10,
                             "actions": {
                                 "primary": {
                                     "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 5
+                                        },
                                         {
                                             "type": "Area",
                                             "value": 4
                                         }
                                     ],
-                                    "effect": "Choose one, or both, on different targets: If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
+                                    "effect": "Target a unit adjacent to you. After the attack: You may swap with a Smoke bomb in radius; if you do, you may place the Smoke bomb into a space in radius."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 4
+                                        "value": 6
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 4
+                                        "value": 5
                                     }
                                 ]
                             }
@@ -18068,8 +18033,61 @@
                 "blue": [
                     [
                         {
-                            "name": "Cold Snap",
-                            "initiative": 9,
+                            "name": "Trip Mine",
+                            "initiative": 10,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 3
+                                        }
+                                    ],
+                                    "effect": "Place 2 Mine tokens, 1 blast and 1 dud, facedown in radius; units may move through them; remove mine tokens after the enemy hero moves through them; for every blast removed, that hero discards a card, if able."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 4
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Cluster Mine",
+                            "initiative": 11,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 3
+                                        }
+                                    ],
+                                    "effect": "Place 3 Mine tokens, 1 blast and 2 dud, facedown in radius; units may move through them; remove mine tokens after the enemy hero moves through them; for every blast removed, that hero discards a card, if able."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 4
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "Dead Grenade",
+                            "initiative": 11,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -18078,26 +18096,25 @@
                                             "value": 2
                                         }
                                     ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
+                                    "effect": "Place a Grenade token into a space in radius. <b>End of turn</b> Up to 1 enemy hero adjacent to that token discards a card, or is defeated. Remove the Grenade token."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 5
+                                        "value": 4
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 3
+                                        "value": 2
                                     }
                                 ]
                             }
-
                         }
                     ],
                     [
                         {
-                            "name": "Snowstorm",
-                            "initiative": 10,
+                            "name": "Minefield",
+                            "initiative": 11,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -18106,33 +18123,7 @@
                                             "value": 3
                                         }
                                     ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "5"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "3"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Guardian Spirit",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 4
-                                        }
-                                    ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Guardian Spirit \" is in the discard retrieve it."
+                                    "effect": "Place 3 Mine tokens, 2 blast and 1 dud, facedown in radius; units may move through them; remove mine tokens after the enemy hero moves through them; for every blast removed, that hero discards a card, if able."
                                 },
                                 "secondary": [
                                     {
@@ -18141,91 +18132,107 @@
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 3
+                                        "value": 2
                                     }
                                 ]
                             }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Blizzard",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able. If this card is in your discard, End of turn: May repeat once."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "5"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "3"
-                                    }
-                                ]
-                            }
-
                         },
                         {
-                            "name": "Warrior Spirit",
-                            "initiative": 10,
+                            "name": "Holy Death Grenade",
+                            "initiative": 11,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Area",
-                                            "value": 4
+                                            "value": 2
                                         }
                                     ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Warrior Spirit \" is in the discard retrieve it."
+                                    "effect": "Place a Grenade token into a space in radius. <b>End of turn</b> Up to 2 enemy heroes adjacent to that token discards a card, or is defeated. Remove the Grenade token."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 6
+                                        "value": 5
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 3
+                                        "value": 2
                                     }
                                 ]
                             }
-
                         }
                     ]
                 ],
                 "green": [
                     [
                         {
-                            "name": "Glacial Barrier",
-                            "initiative": 4,
+                            "name": "Poof!",
+                            "initiative": 2,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
-                                            "type": "Area",
+                                            "type": "Defense",
+                                            "value": ""
+                                        },
+                                        {
+                                            "type": "Range",
                                             "value": 3
                                         }
                                     ],
-                                    "effect": "Place an Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "Swap with a Smoke bomb token in range; if you do, block the attack."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Vanish",
+                            "initiative": 2,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Defense",
+                                            "value": ""
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "Swap with a Smoke bomb token in range; if you do, block the attack."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Inner Strength",
+                            "initiative": 3,
+                            "actions": {
+                                "primary": {
+                                    "effect": "<b>This round:</b> Double your item bonuses"
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 3
+                                        "value": 2
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 2
+                                        "value": 3
                                     }
                                 ]
                             }
@@ -18234,17 +18241,61 @@
                     ],
                     [
                         {
-                            "name": "Wall of Frost",
-                            "initiative": 3,
+                            "name": "Ruse",
+                            "initiative": 1,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
-                                            "type": "Area",
-                                            "value": 3
+                                            "type": "Defense",
+                                            "value": ""
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 4
                                         }
                                     ],
-                                    "effect": "Place up to 2 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "Swap with a Smoke bomb token in range; if you do, block the attack. You may place the Smoke bomb into a space in range."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Vanish",
+                            "initiative": 2,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Defense",
+                                            "value": ""
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "Swap with a Smoke bomb token in range; if you do, block the attack."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Inner Strength",
+                            "initiative": 3,
+                            "actions": {
+                                "primary": {
+                                    "effect": "<b>Choose one, or both:<br>-This round:</b> Double your item bonuses<br>- Take a tier || card from your deck and add it to your dasboard as a permement item."
                                 },
                                 "secondary": [
                                     {
@@ -18253,87 +18304,7 @@
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Ancestral Totem",
-                            "initiative": 3,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Range",
-                                            "value": 2
-                                        }
-                                    ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
                                         "value": 3
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Pack Ice",
-                            "initiative": 3,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place up to 3 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 4
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Venerated Totem",
-                            "initiative": 3,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Range",
-                                            "value": 2
-                                        }
-                                    ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead. Totem tokens are immune to enemy actions."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 4
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
                                     }
                                 ]
                             }
@@ -18380,38 +18351,28 @@
             "cards":{
                 "ultimate": [
                     {
-                        "name": "Reign of Winter",
-                        "effect": "Each time after you defeat a minion with your basic attack, an enemy hero in radius discards a card of the color of your choice, if able.",
-                        "parameter":[
-                            {
-                                "type": "Area",
-                                "value": 4
-                            }
-                        ]
+                        "name": "Power Overwheling",
+                        "effect": "Whenever you choose one, you may choose two different options instead, in any oder.<br><br>Each time after you place yourself, an enemy hero adjacent to you discards a card, if able."
                     }
                 ],
                 "gold": [
                     {
-                        "name": "Ice Blast",
-                        "initiative": 11,
+                        "name": "Watch How I Soar",
+                        "initiative": 12,
                         "actions": {
                             "primary": {
                                 "parameter":[
                                     {
-                                        "type": "Attack",
-                                        "value": 3
-                                    },
-                                    {
-                                        "type": "Area",
+                                        "type": "Range",
                                         "value": 4
                                     }
                                 ],
-                                "effect": "Target a unit adjacent to you. If the target discards a card to defend, After the attack: Another enemy hero in radius discards a card of the same color, if able."
+                                "effect": "<b>Choose one:</b><br>- Place yourself into a space<br>- Defeat a minion adjacent to you."
                             },
                             "secondary": [
                                 {
                                     "type": "Defense",
-                                    "value": 1
+                                    "value": 2
                                 },
                                 {
                                     "type": "Movement",
@@ -18419,91 +18380,91 @@
                                 }
                             ]
                         }
-
                     }
                 ],
                 "silver": [
                     {
-                        "name": "Commune With Spirits",
-                        "initiative": 13,
+                        "name": "Swoop In",
+                        "initiative": 6,
                         "actions": {
                             "primary": {
                                 "parameter":[
                                     {
                                         "type": "Basic skill",
                                         "value": ""
+                                    },
+                                    {
+                                        "type": "Area",
+                                        "value": "3"
                                     }
                                 ],
-                                "effect": "A friendly hero in play names a color. You may discard a card of that color. Perform the primary action on a card of that color in your discard."
+                                "effect": "Place yourself into a space in radius adjacent to two or more enemy units; if you do, you may retrieve a discarded card."
                             },
                             "secondary": [
                                 {
                                     "type": "Defense",
-                                    "value": "2"
+                                    "value": 3
                                 }
                             ]
                         }
-
                     }
                 ],
                 "red": [
                     [
                         {
-                            "name": "Winter Dagger",
-                            "initiative": 8,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": "2+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "6"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Winter Spear",
+                            "name": "Challenge accepted",
                             "initiative": 9,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Attack",
-                                            "value": "3+"
+                                            "value": 5
                                         }
                                     ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
+                                    "effect": "Target a unit adjacent to you. After the attack: <b>This turn:</b> Gain +2 Defense."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "6"
+                                        "value": 6
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 3
                                     }
                                 ]
                             }
-
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Matter of Honor",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 6
+                                        }
+                                    ],
+                                    "effect": "Target a unit adjacent to you. After the attack: <b>This turn:</b> Gain +3 Defense."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 7
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 3
+                                    }
+                                ]
+                            }
                         },
                         {
-                            "name": "Spirit Wolf",
+                            "name": "Power Shot",
                             "initiative": 9,
                             "actions": {
                                 "primary": {
@@ -18517,61 +18478,63 @@
                                             "value": 2
                                         }
                                     ],
-                                    "effect": "If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
+                                    "effect": "Target a unit. After the attack: if the target was at maximum range, you may move it 1 space, to a space farther away from you."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "3"
+                                        "value": 4
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 3
                                     }
                                 ]
                             }
-
                         }
                     ],
                     [
                         {
-                            "name": "Winter Scepter",
-                            "initiative": 9,
+                            "name": "Worthy Opponents",
+                            "initiative": 10,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Attack",
-                                            "value": "4+"
+                                            "value": 6
                                         }
                                     ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
+                                    "effect": "Target a unit adjacent to you. After the attack: <b>This turn:</b> Gain +5 Defense."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "7"
+                                        "value": 7
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 3
                                     }
                                 ]
                             }
-
                         },
                         {
-                            "name": "Spirit Bear",
-                            "initiative": 9,
+                            "name": "Thunder Shot",
+                            "initiative": 10,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
-                                            "type": "Area",
-                                            "value": 4
+                                            "type": "Attack",
+                                            "value": 3
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 2
                                         }
                                     ],
-                                    "effect": "Choose one, or both, on different targets: If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
+                                    "effect": "Target a unit. After the attack: if the target is not adjacent to you, you may move it 1 space, to a space farther away from you."
                                 },
                                 "secondary": [
                                     {
@@ -18580,7 +18543,7 @@
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 4
+                                        "value": 3
                                     }
                                 ]
                             }
@@ -18591,17 +18554,11 @@
                 "blue": [
                     [
                         {
-                            "name": "Cold Snap",
-                            "initiative": 9,
+                            "name": "Sudden Breeze",
+                            "initiative": 10,
                             "actions": {
                                 "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 2
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
+                                    "effect": "Move up to 3 spaces in a straight line, ignoring obstacles; you may place an enemy unit you moved through into a space adjacent to you."
                                 },
                                 "secondary": [
                                     {
@@ -18610,7 +18567,7 @@
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 3
+                                        "value": 1
                                     }
                                 ]
                             }
@@ -18619,97 +18576,11 @@
                     ],
                     [
                         {
-                            "name": "Snowstorm",
+                            "name": "Gust of Wind",
                             "initiative": 10,
                             "actions": {
                                 "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "5"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "3"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Guardian Spirit",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 4
-                                        }
-                                    ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Guardian Spirit \" is in the discard retrieve it."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 5
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 3
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Blizzard",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able. If this card is in your discard, End of turn: May repeat once."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "5"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "3"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Warrior Spirit",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 4
-                                        }
-                                    ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Warrior Spirit \" is in the discard retrieve it."
+                                    "effect": "Move up to 4 spaces in a straight line, ignoring obstacles; you may place an enemy unit you moved through into a space adjacent to you."
                                 },
                                 "secondary": [
                                     {
@@ -18718,7 +18589,68 @@
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 3
+                                        "value": 1
+                                    }
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "Dash and Slash",
+                            "initiative": 10,
+                            "actions": {
+                                "primary": {
+                                    "effect": "Move up to 4 spaces in a straight line, ignoring obstacles; an enemy hero you moved through discards a card, if able."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 6
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 1
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Crushing Squall" ,
+                            "initiative": 11,
+                            "actions": {
+                                "primary": {
+                                    "effect": "Move up to 5 spaces in a straight line, ignoring obstacles; you may place an enemy unit you moved through into a space adjacent to you."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 6
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 1
+                                    }
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "Death from above",
+                            "initiative": 11,
+                            "actions": {
+                                "primary": {
+                                    "effect": "Move up to 5 spaces in a straight line, ignoring obstacles; an enemy hero you moved through discards a card, if able."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 6
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 1
                                     }
                                 ]
                             }
@@ -18729,17 +18661,11 @@
                 "green": [
                     [
                         {
-                            "name": "Glacial Barrier",
-                            "initiative": 4,
+                            "name": "Focus",
+                            "initiative": 3,
                             "actions": {
                                 "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place an Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "<b>Next turn:</b> Before you perform a primary action, you may move 1 space."
                                 },
                                 "secondary": [
                                     {
@@ -18757,17 +18683,11 @@
                     ],
                     [
                         {
-                            "name": "Wall of Frost",
-                            "initiative": 3,
+                            "name": "Discipline",
+                            "initiative": 2,
                             "actions": {
                                 "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place up to 2 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "<b>Next turn:</b> Before you perform a primary action, you may move up to 2 spaces."
                                 },
                                 "secondary": [
                                     {
@@ -18780,20 +18700,19 @@
                                     }
                                 ]
                             }
-
                         },
                         {
-                            "name": "Ancestral Totem",
-                            "initiative": 3,
+                            "name": "Living tornado",
+                            "initiative": 2,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
-                                            "type": "Range",
-                                            "value": 2
+                                            "type": "Area",
+                                            "value": 3
                                         }
                                     ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead."
+                                    "effect": "Swap two units at maximum range."
                                 },
                                 "secondary": [
                                     {
@@ -18806,22 +18725,15 @@
                                     }
                                 ]
                             }
-
                         }
                     ],
                     [
                         {
-                            "name": "Pack Ice",
-                            "initiative": 3,
+                            "name": "Mastery",
+                            "initiative": 2,
                             "actions": {
                                 "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place up to 3 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "<b>Next turn:</b> Before you perform a primary action, you may move up to 3 spaces."
                                 },
                                 "secondary": [
                                     {
@@ -18837,17 +18749,17 @@
 
                         },
                         {
-                            "name": "Venerated Totem",
-                            "initiative": 3,
+                            "name": "Storm Spirit",
+                            "initiative": 2,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
-                                            "type": "Range",
-                                            "value": 2
+                                            "type": "Area",
+                                            "value": 3
                                         }
                                     ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead. Totem tokens are immune to enemy actions."
+                                    "effect": "Swap two units in radius and at equal distance from you."
                                 },
                                 "secondary": [
                                     {
@@ -23086,33 +22998,17 @@
             "cards":{
                 "ultimate": [
                     {
-                        "name": "Reign of Winter",
-                        "effect": "Each time after you defeat a minion with your basic attack, an enemy hero in radius discards a card of the color of your choice, if able.",
-                        "parameter":[
-                            {
-                                "type": "Area",
-                                "value": 4
-                            }
-                        ]
+                        "name": "Bullet Time",
+                        "effect": "After you resolve a basic card, you may perform the primary action on that card; You cannot target the same enemy hero twice in the same turn this way."
                     }
                 ],
                 "gold": [
                     {
-                        "name": "Ice Blast",
-                        "initiative": 11,
+                        "name": "Reload",
+                        "initiative": 6,
                         "actions": {
                             "primary": {
-                                "parameter":[
-                                    {
-                                        "type": "Attack",
-                                        "value": 3
-                                    },
-                                    {
-                                        "type": "Area",
-                                        "value": 4
-                                    }
-                                ],
-                                "effect": "Target a unit adjacent to you. If the target discards a card to defend, After the attack: Another enemy hero in radius discards a card of the same color, if able."
+                                "effect": "<b>Choose one:</b><br>- Perform the primary action of your rightmost resolved card.<br>- Defeat a minion adjacent to you."
                             },
                             "secondary": [
                                 {
@@ -23130,8 +23026,8 @@
                 ],
                 "silver": [
                     {
-                        "name": "Commune With Spirits",
-                        "initiative": 13,
+                        "name": "Bounce",
+                        "initiative": 12,
                         "actions": {
                             "primary": {
                                 "parameter":[
@@ -23140,12 +23036,12 @@
                                         "value": ""
                                     }
                                 ],
-                                "effect": "A friendly hero in play names a color. You may discard a card of that color. Perform the primary action on a card of that color in your discard."
+                                "effect": "Move 2 spaces in a straight line, ignoring obstacles; if this card is already resolved as you perform this action, may repeat once"
                             },
                             "secondary": [
                                 {
                                     "type": "Defense",
-                                    "value": "2"
+                                    "value": 2
                                 }
                             ]
                         }
@@ -23155,267 +23051,81 @@
                 "red": [
                     [
                         {
-                            "name": "Winter Dagger",
+                            "name": "Snipe",
                             "initiative": 8,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Attack",
-                                            "value": "2+"
+                                            "value": 5
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 4
                                         }
                                     ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
+                                    "effect": "Target a unit at maximum range, and in a straight line."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "6"
+                                        "value": 4
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 4
                                     }
                                 ]
                             }
-
                         }
                     ],
                     [
                         {
-                            "name": "Winter Spear",
-                            "initiative": 9,
+                            "name": "Prepared Shot",
+                            "initiative": 8,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Attack",
-                                            "value": "3+"
+                                            "value": 5
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 4
                                         }
                                     ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
+                                    "effect": "Target a unit in range, and in a straight line, and not adjacent to you."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "6"
+                                        "value": 5
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 4
                                     }
                                 ]
                             }
-
                         },
                         {
-                            "name": "Spirit Wolf",
-                            "initiative": 9,
+                            "name": "Shotgun",
+                            "initiative": 8,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Attack",
-                                            "value": 3
+                                            "value": 4
                                         },
                                         {
                                             "type": "Range",
                                             "value": 2
                                         }
                                     ],
-                                    "effect": "If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "3"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Winter Scepter",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": "4+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "7"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Spirit Bear",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 4
-                                        }
-                                    ],
-                                    "effect": "Choose one, or both, on different targets: If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 4
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 4
-                                    }
-                                ]
-                            }
-
-                        }
-                    ]
-                ],
-                "blue": [
-                    [
-                        {
-                            "name": "Cold Snap",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 2
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 5
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 3
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Snowstorm",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "5"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "3"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Guardian Spirit",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 4
-                                        }
-                                    ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Guardian Spirit \" is in the discard retrieve it."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 5
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 3
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Blizzard",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able. If this card is in your discard, End of turn: May repeat once."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "5"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "3"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Warrior Spirit",
-                            "initiative": 10,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 4
-                                        }
-                                    ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Warrior Spirit \" is in the discard retrieve it."
+                                    "effect": "Target a unit in range. Before the attack: An enemy hero adjacent to the target discards a card, if able."
                                 },
                                 "secondary": [
                                     {
@@ -23424,18 +23134,216 @@
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 3
+                                        "value": 4
                                     }
                                 ]
                             }
 
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Killshot",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 6
+                                        },
+                                        {
+                                            "type": "Range 5",
+                                            "value": 6
+                                        }
+                                    ],
+                                    "effect": "Target a unit in range, and in a straight line, and not adjacent to you."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 4
+                                    }
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "Super-Shotgun",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 5
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 2
+                                        }
+                                    ],
+                                    "effect": "Target a unit in range. Before the attack: An enemy hero adjacent to the target discards a card, or is defeated."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 6
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 4
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ],
+                "blue": [
+                    [
+                        {
+                            "name": "Steam Jump",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 3
+                                        }
+                                    ],
+                                    "effect": "Place yourself into a space in a straight line in radius. Push an enemy unit adjacent to you up 1 space."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 3
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Assault Jump",
+                            "initiative": 10,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "Place yourself into a space in a straight line in radius. Push an enemy unit adjacent to you up to 2 spaces."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 4
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "Delayed jump",
+                            "initiative": 10,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 2
+                                        }
+                                    ],
+                                    "effect": "<b>End of turn:</b> Place yourself into a space in radius not in a straight line from you."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 4
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 1
+                                    }
+                                ]
+                            }
+
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Drop Trooper",
+                            "initiative": 10,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "Place yourself into a space in a straight line in radius. Push up to enemy units adjacent to you up to 2 spaces."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 4
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "Mobile Scout",
+                            "initiative": 10,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 2
+                                        }
+                                    ],
+                                    "effect": "<b>End of turn:</b> Place yourself into a space in radius not in a straight line from you. You may then fast travel, if able."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 4
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 1
+                                    }
+                                ]
+                            }
                         }
                     ]
                 ],
                 "green": [
                     [
                         {
-                            "name": "Glacial Barrier",
+                            "name": "Surpress Fire",
                             "initiative": 4,
                             "actions": {
                                 "primary": {
@@ -23445,12 +23353,12 @@
                                             "value": 3
                                         }
                                     ],
-                                    "effect": "Place an Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "An enemy hero in radius who is not adjacent to terrain discards a card, if able."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 3
+                                        "value": 2
                                     },
                                     {
                                         "type": "Movement",
@@ -23463,22 +23371,22 @@
                     ],
                     [
                         {
-                            "name": "Wall of Frost",
-                            "initiative": 3,
+                            "name": "Pin Down",
+                            "initiative": 4,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Area",
-                                            "value": 3
+                                            "value": 4
                                         }
                                     ],
-                                    "effect": "Place up to 2 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "An enemy hero in radius who is not adjacent to terrain discards a card, if able."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 3
+                                        "value": 2
                                     },
                                     {
                                         "type": "Movement",
@@ -23489,17 +23397,44 @@
 
                         },
                         {
-                            "name": "Ancestral Totem",
-                            "initiative": 3,
+                            "name": "Mark for Death",
+                            "initiative": 4,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Range",
-                                            "value": 2
+                                            "value": 4
                                         }
                                     ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead."
+                                    "effect": "Move an enemy minion in radius up to 3 spaces to a space in radius.<br><b>Next turn:</b> The first time an enemy minion in radius is defeated, gain 1 coin."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 2
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Killing Ground",
+                            "initiative": 3,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Area",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "An enemy hero in radius who is not adjacent to terrain discards a card, or is defeated."
                                 },
                                 "secondary": [
                                     {
@@ -23512,35 +23447,6 @@
                                     }
                                 ]
                             }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Pack Ice",
-                            "initiative": 3,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place up to 3 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 4
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
                         },
                         {
                             "name": "Venerated Totem",
@@ -23550,15 +23456,14 @@
                                     "parameter":[
                                         {
                                             "type": "Range",
-                                            "value": 2
+                                            "value": 4
                                         }
                                     ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead. Totem tokens are immune to enemy actions."
-                                },
+                                    "effect": "Move up to two enemy minion in radius, up to 3 spaces each, to a space in radius.<br><b>Next turn:</b> The first time an enemy minion in radius is defeated, gain 1 coin."              },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 4
+                                        "value": 3
                                     },
                                     {
                                         "type": "Movement",
@@ -27785,38 +27690,38 @@
             "cards":{
                 "ultimate": [
                     {
-                        "name": "Reign of Winter",
-                        "effect": "Each time after you defeat a minion with your basic attack, an enemy hero in radius discards a card of the color of your choice, if able.",
+                        "name": "March of Nature",
+                        "effect": "Each time after you resolve a card, you may place a Tree token in radius",
                         "parameter":[
                             {
                                 "type": "Area",
-                                "value": 4
+                                "value": 3
                             }
                         ]
                     }
                 ],
                 "gold": [
                     {
-                        "name": "Ice Blast",
+                        "name": "Tree Slam",
                         "initiative": 11,
                         "actions": {
                             "primary": {
                                 "parameter":[
                                     {
                                         "type": "Attack",
-                                        "value": 3
+                                        "value": 4
                                     },
                                     {
-                                        "type": "Area",
-                                        "value": 4
+                                        "type": "Range",
+                                        "value": 2
                                     }
                                 ],
-                                "effect": "Target a unit adjacent to you. If the target discards a card to defend, After the attack: Another enemy hero in radius discards a card of the same color, if able."
+                                "effect": "<b>Choose one</b><br>- Target a minion adjacent to you.<br>- Remove a Tree token adjacent to you. Target a unit in range."
                             },
                             "secondary": [
                                 {
                                     "type": "Defense",
-                                    "value": 1
+                                    "value": 3
                                 },
                                 {
                                     "type": "Movement",
@@ -27829,22 +27734,26 @@
                 ],
                 "silver": [
                     {
-                        "name": "Commune With Spirits",
-                        "initiative": 13,
+                        "name": "Mystic Saplings",
+                        "initiative": 4,
                         "actions": {
                             "primary": {
                                 "parameter":[
                                     {
                                         "type": "Basic skill",
                                         "value": ""
+                                    },
+                                    {
+                                        "type": "Area",
+                                        "value": "3"
                                     }
                                 ],
-                                "effect": "A friendly hero in play names a color. You may discard a card of that color. Perform the primary action on a card of that color in your discard."
+                                "effect": "Place up to 3 Tree tokens in radius: Tree tokens are not removed at the end of the round."
                             },
                             "secondary": [
                                 {
                                     "type": "Defense",
-                                    "value": "2"
+                                    "value": 4
                                 }
                             ]
                         }
@@ -27854,75 +27763,78 @@
                 "red": [
                     [
                         {
-                            "name": "Winter Dagger",
-                            "initiative": 8,
+                            "name": "Nature's Protector",
+                            "initiative": 7,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Attack",
-                                            "value": "2+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "6"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Winter Spear",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": "3+"
-                                        }
-                                    ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": "6"
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": "4"
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Spirit Wolf",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Attack",
-                                            "value": 3
+                                            "value": 5
                                         },
                                         {
                                             "type": "Range",
                                             "value": 2
                                         }
                                     ],
-                                    "effect": "If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
+                                    "effect": "<b>Choose one:</b><br>- target a hero adjacent to you.<br>- Target a unit in range adjacent to a Tree token."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 7
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 4
+                                    }
+                                ]
+                            }
+
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Nature's Guardian",
+                            "initiative": 8,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Attack",
+                                            "value": 5
+                                        },
+                                        {
+                                            "type": "Range",
+                                            "value": 3
+                                        }
+                                    ],
+                                    "effect": "<b>Choose one:</b><br>- target a hero adjacent to you.<br>- Target a unit in range adjacent to a Tree token."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 8
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 4
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Trample",
+                            "initiative": 7,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Movement",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "If you move in a straight line: You may ignore obstacles; each enemy hero you moved through discards a card, or is defeated; defeat up to one minion you moved through."
                                 },
                                 "secondary": [
                                     {
@@ -27940,92 +27852,58 @@
                     ],
                     [
                         {
-                            "name": "Winter Scepter",
-                            "initiative": 9,
+                            "name": "Nature's Champion",
+                            "initiative": 8,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Attack",
-                                            "value": "4+"
+                                            "value": 6
                                         }
                                     ],
-                                    "effect": "Target a unit adjacent to you. +3 attack if this card is not in the discard."
+                                    "effect": "<b>Choose one, or both</b>, on different targets:<br>- target a hero adjacent to you.<br>- Target a unit in range adjacent to a Tree token."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "7"
+                                        "value": 8
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "4"
+                                        "value": 4
                                     }
                                 ]
                             }
-
                         },
                         {
-                            "name": "Spirit Bear",
-                            "initiative": 9,
+                            "name": "Angry Stampede",
+                            "initiative": 8,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
-                                            "type": "Area",
+                                            "type": "Movement",
                                             "value": 4
                                         }
                                     ],
-                                    "effect": "Choose one, or both, on different targets: If this card is not in the discard. target a unit in range. / Target a unit adjacent to you."
+                                    "effect": "If you move in a straight line: You may ignore obstacles; each enemy hero you moved through discards a card, or is defeated; defeat up to two minions you moved through."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 4
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 4
+                                        "value": 7
                                     }
                                 ]
                             }
-
                         }
                     ]
                 ],
                 "blue": [
                     [
                         {
-                            "name": "Cold Snap",
-                            "initiative": 9,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 2
-                                        }
-                                    ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 5
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 3
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Snowstorm",
-                            "initiative": 10,
+                            "name": "Gifts of Nature",
+                            "initiative": 8,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -28034,24 +27912,26 @@
                                             "value": 3
                                         }
                                     ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
+                                    "effect": "Remove a Tree token in radius. You may retrieve a discarded card."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "5"
+                                        "value": 5
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "3"
+                                        "value": 2
                                     }
                                 ]
                             }
 
-                        },
+                        }
+                    ],
+                    [
                         {
-                            "name": "Guardian Spirit",
-                            "initiative": 10,
+                            "name": "Tree of Plenty",
+                            "initiative": 9,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -28060,44 +27940,62 @@
                                             "value": 4
                                         }
                                     ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Guardian Spirit \" is in the discard retrieve it."
+                                    "effect": "Remove a Tree token in radius.<br><b>Choose one:</b><br>- You may retrieve a discarded card.<br>A friendly hero in radius may retrieve a discarded card."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": 5
+                                        "value": 6
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 3
+                                        "value": 2
                                     }
                                 ]
                             }
-
+                        },
+                        {
+                            "name": "Claim Dominance",
+                            "initiative": 9,
+                            "actions": {
+                                "primary": {
+                                    "effect": "<b>This Round:</b> Up to 1 enemy minion adjacent to you does not count towards the minion total during minion battle, regardless of immunity."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 6
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
                         }
                     ],
                     [
                         {
-                            "name": "Blizzard",
-                            "initiative": 10,
+                            "name": "Abundance",
+                            "initiative": 9,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Area",
-                                            "value": 3
+                                            "value": 4
                                         }
                                     ],
-                                    "effect": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able. If this card is in your discard, End of turn: May repeat once."
+                                    "effect": "Remove a Tree token in radius.<br><b>Choose one:</b><br>- You may retrieve a discarded card.<br>A friendly hero in radius may retrieve a discarded card."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
-                                        "value": "5"
+                                        "value": "6(7?)"
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": "3"
+                                        "value": 2
                                     }
                                 ]
                             }
@@ -28114,7 +28012,7 @@
                                             "value": 4
                                         }
                                     ],
-                                    "effect": "Up to 1 friendly hero in radius may retrieve a discarded card if \" Warrior Spirit \" is in the discard retrieve it."
+                                    "effect": "<b>This Round:</b> Up to 2 enemy minions adjacent to you do not count towards the minion total during minion battle, regardless of immunity."
                                 },
                                 "secondary": [
                                     {
@@ -28123,110 +28021,27 @@
                                     },
                                     {
                                         "type": "Movement",
-                                        "value": 3
+                                        "value": 2
                                     }
                                 ]
                             }
-
                         }
                     ]
                 ],
                 "green": [
                     [
                         {
-                            "name": "Glacial Barrier",
-                            "initiative": 4,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place an Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 3
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Wall of Frost",
-                            "initiative": 3,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
-                                            "value": 3
-                                        }
-                                    ],
-                                    "effect": "Place up to 2 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 3
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
-                        },
-                        {
-                            "name": "Ancestral Totem",
-                            "initiative": 3,
+                            "name": "Toss Away",
+                            "initiative": 6,
                             "actions": {
                                 "primary": {
                                     "parameter":[
                                         {
                                             "type": "Range",
-                                            "value": 2
-                                        }
-                                    ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead."
-                                },
-                                "secondary": [
-                                    {
-                                        "type": "Defense",
-                                        "value": 3
-                                    },
-                                    {
-                                        "type": "Movement",
-                                        "value": 2
-                                    }
-                                ]
-                            }
-
-                        }
-                    ],
-                    [
-                        {
-                            "name": "Pack Ice",
-                            "initiative": 3,
-                            "actions": {
-                                "primary": {
-                                    "parameter":[
-                                        {
-                                            "type": "Area",
                                             "value": 3
                                         }
                                     ],
-                                    "effect": "Place up to 3 Ice token in radius. Enemy heroes have -1 Initiative for every ice token they are adjacent to."
+                                    "effect": "Place a token, or an enemy unit, adjacent to you into a space in range."
                                 },
                                 "secondary": [
                                     {
@@ -28239,11 +28054,37 @@
                                     }
                                 ]
                             }
-
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Mighty Throw",
+                            "initiative": 5,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Range",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "Place a token, or an enemy unit, adjacent to you into a space in range."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 4
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
                         },
                         {
-                            "name": "Venerated Totem",
-                            "initiative": 3,
+                            "name": "Into the Canopy",
+                            "initiative": 5,
                             "actions": {
                                 "primary": {
                                     "parameter":[
@@ -28252,12 +28093,65 @@
                                             "value": 2
                                         }
                                     ],
-                                    "effect": "Place a Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead. Totem tokens are immune to enemy actions."
+                                    "effect": "<b>Choose one:</b><br>- Swap with a Tree token in radius.<br>- Swap with friendly unit in radius with a Tree token in radius."
                                 },
                                 "secondary": [
                                     {
                                         "type": "Defense",
                                         "value": 4
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Monstrous Throw",
+                            "initiative": 5,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Range",
+                                            "value": 4
+                                        }
+                                    ],
+                                    "effect": "Place a token, or an enemy unit, adjacent to you into a space in range. May repeat once."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 5
+                                    },
+                                    {
+                                        "type": "Movement",
+                                        "value": 2
+                                    }
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "Treetop Ride",
+                            "initiative": 5,
+                            "actions": {
+                                "primary": {
+                                    "parameter":[
+                                        {
+                                            "type": "Range",
+                                            "value": 2
+                                        }
+                                    ],
+                                    "effect": "<b>Choose up to two times:</b><br>- Swap with a Tree token in radius.<br>- Swap with friendly unit in radius with a Tree token in radius."
+                                },
+                                "secondary": [
+                                    {
+                                        "type": "Defense",
+                                        "value": 5
                                     },
                                     {
                                         "type": "Movement",
